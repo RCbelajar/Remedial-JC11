@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Ujian Remedial Soal no.2 </title>
+</head>
+<body>
+
+    <h3>Choose your number and Click (Click Me)</h3>
+    <br>
+    <input id="testnum" type="number" name="input01">
+
+    <p>Click the button below to display a Triangle Form of Numbers.</p>
+
+    <button onclick="TriangleForm()">Click Me</button>
+
+    <p id="print"></p>
+
+<script>
+
+function TriangleForm() {
+            var n = document.getElementById('testnum').value
+            var output = ''
+            var ganjil = 1
+            for (var i = 0; i < n; i++) {
+                for (var j = i; j < n; j++) {
+                    output += `<br>`
+                }
+                for (var k = 0; k <= i; k++) {
+                    output += '  ' + ganjil
+                    ganjil = ganjil + 2
+                }
+                output += `<br>`
+            }
+            document.getElementById('print').innerHTML = output
+        }
+
+</script>
+
+</body>
+</html>
